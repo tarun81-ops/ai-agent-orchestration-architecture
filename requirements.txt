@@ -2,3 +2,5 @@ openai
 pydantic>=2
 python-dotenv
 pytest
+customtkinter
+# pyinstaller (only needed to build the standalone .exe)
