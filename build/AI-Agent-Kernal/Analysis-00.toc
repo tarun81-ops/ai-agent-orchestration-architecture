@@ -1560,6 +1560,346 @@
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\customtkinter\\windows\\widgets\\image\\ctk_image.py',
    'PYMODULE'),
+  ('PIL.ImageTk',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageTk.py',
+   'PYMODULE'),
+  ('PIL._typing',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_typing.py',
+   'PYMODULE'),
+  ('PIL.ImageFile',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageFile.py',
+   'PYMODULE'),
+  ('PIL.TiffImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'PYMODULE'),
+  ('PIL._binary',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_binary.py',
+   'PYMODULE'),
+  ('PIL.TiffTags',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\TiffTags.py',
+   'PYMODULE'),
+  ('PIL.ImagePalette',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImagePalette.py',
+   'PYMODULE'),
+  ('PIL.PaletteFile',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PaletteFile.py',
+   'PYMODULE'),
+  ('PIL.ImageColor',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageColor.py',
+   'PYMODULE'),
+  ('colorsys', 'C:\\Program Files\\Python314\\Lib\\colorsys.py', 'PYMODULE'),
+  ('PIL.GimpPaletteFile',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GimpGradientFile',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'PYMODULE'),
+  ('PIL.ImageOps',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageOps.py',
+   'PYMODULE'),
+  ('PIL._util',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_util.py',
+   'PYMODULE'),
+  ('PIL.ExifTags',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ExifTags.py',
+   'PYMODULE'),
+  ('PIL.Image',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\Image.py',
+   'PYMODULE'),
+  ('PIL.XpmImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XbmImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XVThumbImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WmfImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WebPImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TgaImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SunImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SpiderImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SgiImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.QoiImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\QoiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PsdImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PixarImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.features',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\features.py',
+   'PYMODULE'),
+  ('PIL.PdfParser',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PdfParser.py',
+   'PYMODULE'),
+  ('PIL.ImageSequence',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageSequence.py',
+   'PYMODULE'),
+  ('PIL.PcxImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcdImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PalmImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MspImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\MspImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpoImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpegImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MicImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.McIdasImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Jpeg2KImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IptcImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImtImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcoImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcnsImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Hdf5StubImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GribStubImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GbrImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FtexImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FpxImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FliImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FitsImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\FitsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.EpsImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DdsImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DcxImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.CurImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BufrStubImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BlpImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.AvifImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\AvifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageShow',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageShow.py',
+   'PYMODULE'),
+  ('PIL.ImageCms',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageCms.py',
+   'PYMODULE'),
+  ('PIL.ImageWin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageWin.py',
+   'PYMODULE'),
+  ('PIL.PngImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageChops',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageChops.py',
+   'PYMODULE'),
+  ('PIL.PpmImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegPresets',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\JpegPresets.py',
+   'PYMODULE'),
+  ('PIL.GifImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageMath',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageMath.py',
+   'PYMODULE'),
+  ('PIL.BmpImagePlugin',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageQt',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageQt.py',
+   'PYMODULE'),
+  ('PIL.ImageFilter',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageFilter.py',
+   'PYMODULE'),
+  ('xml.etree.ElementTree',
+   'C:\\Program Files\\Python314\\Lib\\xml\\etree\\ElementTree.py',
+   'PYMODULE'),
+  ('xml.etree.cElementTree',
+   'C:\\Program Files\\Python314\\Lib\\xml\\etree\\cElementTree.py',
+   'PYMODULE'),
+  ('xml.etree.ElementInclude',
+   'C:\\Program Files\\Python314\\Lib\\xml\\etree\\ElementInclude.py',
+   'PYMODULE'),
+  ('xml.etree.ElementPath',
+   'C:\\Program Files\\Python314\\Lib\\xml\\etree\\ElementPath.py',
+   'PYMODULE'),
+  ('xml.etree',
+   'C:\\Program Files\\Python314\\Lib\\xml\\etree\\__init__.py',
+   'PYMODULE'),
+  ('PIL._deprecate',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_deprecate.py',
+   'PYMODULE'),
+  ('PIL.ImageMode',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\__init__.py',
+   'PYMODULE'),
+  ('PIL.ImageDraw2',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageDraw2.py',
+   'PYMODULE'),
+  ('PIL.ImagePath',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImagePath.py',
+   'PYMODULE'),
+  ('PIL.ImageDraw',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageDraw.py',
+   'PYMODULE'),
+  ('PIL.ImageText',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageText.py',
+   'PYMODULE'),
+  ('PIL.ImageFont',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\ImageFont.py',
+   'PYMODULE'),
+  ('PIL._version',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_version.py',
+   'PYMODULE'),
   ('customtkinter.windows.widgets.image',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\customtkinter\\windows\\widgets\\image\\__init__.py',
@@ -2040,7 +2380,6 @@
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\pydantic\\v1\\color.py',
    'PYMODULE'),
-  ('colorsys', 'C:\\Program Files\\Python314\\Lib\\colorsys.py', 'PYMODULE'),
   ('pydantic.v1.class_validators',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\pydantic\\v1\\class_validators.py',
@@ -11605,6 +11944,37 @@
    'EXTENSION'),
   ('_ssl.pyd', 'C:\\Program Files\\Python314\\DLLs\\_ssl.pyd', 'EXTENSION'),
   ('_wmi.pyd', 'C:\\Program Files\\Python314\\DLLs\\_wmi.pyd', 'EXTENSION'),
+  ('PIL\\_imagingtk.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imagingtk.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_webp.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_webp.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_avif.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_avif.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingcms.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imagingcms.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingmath.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imagingmath.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('PIL\\_imaging.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imaging.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingft.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imagingft.cp314-win_amd64.pyd',
+   'EXTENSION'),
   ('_uuid.pyd', 'C:\\Program Files\\Python314\\DLLs\\_uuid.pyd', 'EXTENSION'),
   ('_zoneinfo.pyd',
    'C:\\Program Files\\Python314\\DLLs\\_zoneinfo.pyd',
@@ -11621,41 +11991,48 @@
    'C:\\Program Files\\Python314\\DLLs\\_tkinter.pyd',
    'EXTENSION'),
   ('_queue.pyd', 'C:\\Program Files\\Python314\\DLLs\\_queue.pyd', 'EXTENSION'),
-  ('api-ms-win-crt-stdio-l1-1-0.dll',
+  ('api-ms-win-crt-heap-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-convert-l1-1-0.dll',
+  ('api-ms-win-crt-process-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-math-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-math-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-heap-l1-1-0.dll',
+  ('api-ms-win-crt-convert-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Program Files\\Python314\\VCRUNTIME140.dll',
    'BINARY'),
   ('api-ms-win-crt-locale-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-locale-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-string-l1-1-0.dll',
+  ('api-ms-win-crt-time-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-environment-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-environment-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-time-l1-1-0.dll',
+  ('api-ms-win-crt-string-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-conio-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-filesystem-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
@@ -11664,13 +12041,6 @@
   ('api-ms-win-crt-runtime-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-runtime-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-process-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
-   'BINARY'),
-  ('VCRUNTIME140.dll',
-   'C:\\Program Files\\Python314\\VCRUNTIME140.dll',
    'BINARY'),
   ('libcrypto-3.dll',
    'C:\\Program Files\\Python314\\DLLs\\libcrypto-3.dll',
@@ -11684,14 +12054,18 @@
   ('VCRUNTIME140_1.dll',
    'C:\\Program Files\\Python314\\VCRUNTIME140_1.dll',
    'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
   ('api-ms-win-core-synch-l1-2-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-synch-l1-2-0.dll',
    'BINARY'),
+  ('tcl90.dll', 'C:\\Program Files\\Python314\\DLLs\\tcl90.dll', 'BINARY'),
   ('tcl9tk90.dll',
    'C:\\Program Files\\Python314\\DLLs\\tcl9tk90.dll',
    'BINARY'),
-  ('tcl90.dll', 'C:\\Program Files\\Python314\\DLLs\\tcl90.dll', 'BINARY'),
   ('libtommath.dll',
    'C:\\Program Files\\Python314\\DLLs\\libtommath.dll',
    'BINARY'),
@@ -11699,38 +12073,78 @@
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\ucrtbase.dll',
    'BINARY'),
-  ('api-ms-win-crt-utility-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-utility-l1-1-0.dll',
-   'BINARY'),
   ('zlib1.dll', 'C:\\Program Files\\Python314\\DLLs\\zlib1.dll', 'BINARY'),
   ('api-ms-win-crt-private-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-private-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-datetime-l1-1-0.dll',
+  ('api-ms-win-core-file-l1-2-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-file-l1-2-0.dll',
    'BINARY'),
-  ('api-ms-win-core-handle-l1-1-0.dll',
+  ('api-ms-win-core-memory-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-processthreads-l1-1-1.dll',
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+  ('api-ms-win-core-synch-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-file-l2-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-file-l2-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-interlocked-l1-1-0.dll',
+  ('api-ms-win-core-handle-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
    'BINARY'),
   ('api-ms-win-core-debug-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
@@ -11740,69 +12154,25 @@
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-libraryloader-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-string-l1-1-0.dll',
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-sysinfo-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-profile-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-profile-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-util-l1-1-0.dll',
+  ('api-ms-win-core-file-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-timezone-l1-1-0.dll',
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-synch-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-sysinfo-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-sysinfo-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-memory-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-heap-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-namedpipe-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-console-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-console-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processthreads-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-localization-l1-2-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-localization-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processenvironment-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-file-l1-2-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-file-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-rtlsupport-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-file-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
    'BINARY')],
  [],
  [],
@@ -12051,84 +12421,98 @@
    'kernal\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
    'ipsum.txt',
    'DATA'),
-  ('httpx2-2.13.0.dist-info\\METADATA',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\METADATA',
-   'DATA'),
-  ('httpcore2-2.13.0.dist-info\\licenses\\LICENSE.md',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\licenses\\LICENSE.md',
-   'DATA'),
   ('pydantic-2.13.5.dist-info\\RECORD',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\RECORD',
-   'DATA'),
-  ('httpcore2-2.13.0.dist-info\\INSTALLER',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\INSTALLER',
-   'DATA'),
-  ('httpx2-2.13.0.dist-info\\RECORD',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\RECORD',
-   'DATA'),
-  ('httpx2-2.13.0.dist-info\\INSTALLER',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\INSTALLER',
-   'DATA'),
-  ('httpx2-2.13.0.dist-info\\licenses\\LICENSE.md',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\licenses\\LICENSE.md',
-   'DATA'),
-  ('httpcore2-2.13.0.dist-info\\RECORD',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\RECORD',
-   'DATA'),
-  ('pydantic-2.13.5.dist-info\\WHEEL',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\WHEEL',
-   'DATA'),
-  ('httpcore2-2.13.0.dist-info\\WHEEL',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\WHEEL',
    'DATA'),
   ('httpx2-2.13.0.dist-info\\WHEEL',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\WHEEL',
    'DATA'),
-  ('pydantic-2.13.5.dist-info\\METADATA',
+  ('httpx2-2.13.0.dist-info\\licenses\\LICENSE.md',
    'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\METADATA',
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\licenses\\LICENSE.md',
    'DATA'),
-  ('httpcore2-2.13.0.dist-info\\METADATA',
+  ('httpcore2-2.13.0.dist-info\\INSTALLER',
    'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\METADATA',
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\INSTALLER',
    'DATA'),
-  ('pydantic-2.13.5.dist-info\\licenses\\LICENSE',
+  ('httpcore2-2.13.0.dist-info\\RECORD',
    'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\licenses\\LICENSE',
-   'DATA'),
-  ('httpx2-2.13.0.dist-info\\entry_points.txt',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\entry_points.txt',
-   'DATA'),
-  ('pydantic-2.13.5.dist-info\\REQUESTED',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\REQUESTED',
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\RECORD',
    'DATA'),
   ('pydantic-2.13.5.dist-info\\INSTALLER',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\INSTALLER',
    'DATA'),
+  ('pydantic-2.13.5.dist-info\\METADATA',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\METADATA',
+   'DATA'),
+  ('pydantic-2.13.5.dist-info\\WHEEL',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\WHEEL',
+   'DATA'),
+  ('httpx2-2.13.0.dist-info\\METADATA',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\METADATA',
+   'DATA'),
+  ('pydantic-2.13.5.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('httpcore2-2.13.0.dist-info\\WHEEL',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\WHEEL',
+   'DATA'),
+  ('httpx2-2.13.0.dist-info\\INSTALLER',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('httpx2-2.13.0.dist-info\\RECORD',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\RECORD',
+   'DATA'),
+  ('httpcore2-2.13.0.dist-info\\METADATA',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\METADATA',
+   'DATA'),
+  ('httpcore2-2.13.0.dist-info\\licenses\\LICENSE.md',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\licenses\\LICENSE.md',
+   'DATA'),
+  ('pydantic-2.13.5.dist-info\\REQUESTED',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\REQUESTED',
+   'DATA'),
+  ('httpx2-2.13.0.dist-info\\entry_points.txt',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\entry_points.txt',
+   'DATA'),
   ('base_library.zip',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\build\\AI-Agent-Kernal\\base_library.zip',
    'DATA')],
- [('stat', 'C:\\Program Files\\Python314\\Lib\\stat.py', 'PYMODULE'),
-  ('abc', 'C:\\Program Files\\Python314\\Lib\\abc.py', 'PYMODULE'),
-  ('_weakrefset',
-   'C:\\Program Files\\Python314\\Lib\\_weakrefset.py',
+ [('locale', 'C:\\Program Files\\Python314\\Lib\\locale.py', 'PYMODULE'),
+  ('sre_compile',
+   'C:\\Program Files\\Python314\\Lib\\sre_compile.py',
    'PYMODULE'),
+  ('stat', 'C:\\Program Files\\Python314\\Lib\\stat.py', 'PYMODULE'),
   ('linecache', 'C:\\Program Files\\Python314\\Lib\\linecache.py', 'PYMODULE'),
+  ('enum', 'C:\\Program Files\\Python314\\Lib\\enum.py', 'PYMODULE'),
+  ('abc', 'C:\\Program Files\\Python314\\Lib\\abc.py', 'PYMODULE'),
+  ('io', 'C:\\Program Files\\Python314\\Lib\\io.py', 'PYMODULE'),
+  ('types', 'C:\\Program Files\\Python314\\Lib\\types.py', 'PYMODULE'),
+  ('traceback', 'C:\\Program Files\\Python314\\Lib\\traceback.py', 'PYMODULE'),
+  ('genericpath',
+   'C:\\Program Files\\Python314\\Lib\\genericpath.py',
+   'PYMODULE'),
+  ('reprlib', 'C:\\Program Files\\Python314\\Lib\\reprlib.py', 'PYMODULE'),
+  ('operator', 'C:\\Program Files\\Python314\\Lib\\operator.py', 'PYMODULE'),
+  ('collections',
+   'C:\\Program Files\\Python314\\Lib\\collections\\__init__.py',
+   'PYMODULE'),
+  ('sre_parse', 'C:\\Program Files\\Python314\\Lib\\sre_parse.py', 'PYMODULE'),
   ('encodings.zlib_codec',
    'C:\\Program Files\\Python314\\Lib\\encodings\\zlib_codec.py',
    'PYMODULE'),
@@ -12499,33 +12883,23 @@
    'C:\\Program Files\\Python314\\Lib\\encodings\\__init__.py',
    'PYMODULE'),
   ('keyword', 'C:\\Program Files\\Python314\\Lib\\keyword.py', 'PYMODULE'),
-  ('io', 'C:\\Program Files\\Python314\\Lib\\io.py', 'PYMODULE'),
-  ('traceback', 'C:\\Program Files\\Python314\\Lib\\traceback.py', 'PYMODULE'),
-  ('codecs', 'C:\\Program Files\\Python314\\Lib\\codecs.py', 'PYMODULE'),
-  ('locale', 'C:\\Program Files\\Python314\\Lib\\locale.py', 'PYMODULE'),
-  ('sre_constants',
-   'C:\\Program Files\\Python314\\Lib\\sre_constants.py',
+  ('_weakrefset',
+   'C:\\Program Files\\Python314\\Lib\\_weakrefset.py',
    'PYMODULE'),
-  ('copyreg', 'C:\\Program Files\\Python314\\Lib\\copyreg.py', 'PYMODULE'),
-  ('sre_compile',
-   'C:\\Program Files\\Python314\\Lib\\sre_compile.py',
-   'PYMODULE'),
-  ('reprlib', 'C:\\Program Files\\Python314\\Lib\\reprlib.py', 'PYMODULE'),
+  ('heapq', 'C:\\Program Files\\Python314\\Lib\\heapq.py', 'PYMODULE'),
+  ('os', 'C:\\Program Files\\Python314\\Lib\\os.py', 'PYMODULE'),
   ('_collections_abc',
    'C:\\Program Files\\Python314\\Lib\\_collections_abc.py',
    'PYMODULE'),
-  ('genericpath',
-   'C:\\Program Files\\Python314\\Lib\\genericpath.py',
-   'PYMODULE'),
-  ('collections',
-   'C:\\Program Files\\Python314\\Lib\\collections\\__init__.py',
-   'PYMODULE'),
-  ('types', 'C:\\Program Files\\Python314\\Lib\\types.py', 'PYMODULE'),
-  ('functools', 'C:\\Program Files\\Python314\\Lib\\functools.py', 'PYMODULE'),
-  ('sre_parse', 'C:\\Program Files\\Python314\\Lib\\sre_parse.py', 'PYMODULE'),
   ('warnings', 'C:\\Program Files\\Python314\\Lib\\warnings.py', 'PYMODULE'),
-  ('os', 'C:\\Program Files\\Python314\\Lib\\os.py', 'PYMODULE'),
+  ('ntpath', 'C:\\Program Files\\Python314\\Lib\\ntpath.py', 'PYMODULE'),
   ('posixpath', 'C:\\Program Files\\Python314\\Lib\\posixpath.py', 'PYMODULE'),
+  ('codecs', 'C:\\Program Files\\Python314\\Lib\\codecs.py', 'PYMODULE'),
+  ('weakref', 'C:\\Program Files\\Python314\\Lib\\weakref.py', 'PYMODULE'),
+  ('copyreg', 'C:\\Program Files\\Python314\\Lib\\copyreg.py', 'PYMODULE'),
+  ('sre_constants',
+   'C:\\Program Files\\Python314\\Lib\\sre_constants.py',
+   'PYMODULE'),
   ('re._parser',
    'C:\\Program Files\\Python314\\Lib\\re\\_parser.py',
    'PYMODULE'),
@@ -12538,9 +12912,5 @@
   ('re._casefix',
    'C:\\Program Files\\Python314\\Lib\\re\\_casefix.py',
    'PYMODULE'),
-  ('operator', 'C:\\Program Files\\Python314\\Lib\\operator.py', 'PYMODULE'),
-  ('heapq', 'C:\\Program Files\\Python314\\Lib\\heapq.py', 'PYMODULE'),
-  ('ntpath', 'C:\\Program Files\\Python314\\Lib\\ntpath.py', 'PYMODULE'),
-  ('weakref', 'C:\\Program Files\\Python314\\Lib\\weakref.py', 'PYMODULE'),
-  ('enum', 'C:\\Program Files\\Python314\\Lib\\enum.py', 'PYMODULE'),
+  ('functools', 'C:\\Program Files\\Python314\\Lib\\functools.py', 'PYMODULE'),
   ('re', 'C:\\Program Files\\Python314\\Lib\\re\\__init__.py', 'PYMODULE')])

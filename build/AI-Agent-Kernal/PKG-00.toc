@@ -93,6 +93,37 @@
    'EXTENSION'),
   ('_ssl.pyd', 'C:\\Program Files\\Python314\\DLLs\\_ssl.pyd', 'EXTENSION'),
   ('_wmi.pyd', 'C:\\Program Files\\Python314\\DLLs\\_wmi.pyd', 'EXTENSION'),
+  ('PIL\\_imagingtk.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imagingtk.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_webp.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_webp.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_avif.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_avif.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingcms.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imagingcms.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingmath.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imagingmath.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('PIL\\_imaging.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imaging.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingft.cp314-win_amd64.pyd',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\PIL\\_imagingft.cp314-win_amd64.pyd',
+   'EXTENSION'),
   ('_uuid.pyd', 'C:\\Program Files\\Python314\\DLLs\\_uuid.pyd', 'EXTENSION'),
   ('_zoneinfo.pyd',
    'C:\\Program Files\\Python314\\DLLs\\_zoneinfo.pyd',
@@ -109,41 +140,48 @@
    'C:\\Program Files\\Python314\\DLLs\\_tkinter.pyd',
    'EXTENSION'),
   ('_queue.pyd', 'C:\\Program Files\\Python314\\DLLs\\_queue.pyd', 'EXTENSION'),
-  ('api-ms-win-crt-stdio-l1-1-0.dll',
+  ('api-ms-win-crt-heap-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-convert-l1-1-0.dll',
+  ('api-ms-win-crt-process-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-math-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-math-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-heap-l1-1-0.dll',
+  ('api-ms-win-crt-convert-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Program Files\\Python314\\VCRUNTIME140.dll',
    'BINARY'),
   ('api-ms-win-crt-locale-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-locale-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-string-l1-1-0.dll',
+  ('api-ms-win-crt-time-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-environment-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-environment-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-time-l1-1-0.dll',
+  ('api-ms-win-crt-string-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-conio-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-filesystem-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
@@ -152,13 +190,6 @@
   ('api-ms-win-crt-runtime-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-runtime-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-process-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
-   'BINARY'),
-  ('VCRUNTIME140.dll',
-   'C:\\Program Files\\Python314\\VCRUNTIME140.dll',
    'BINARY'),
   ('libcrypto-3.dll',
    'C:\\Program Files\\Python314\\DLLs\\libcrypto-3.dll',
@@ -172,14 +203,18 @@
   ('VCRUNTIME140_1.dll',
    'C:\\Program Files\\Python314\\VCRUNTIME140_1.dll',
    'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
   ('api-ms-win-core-synch-l1-2-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-synch-l1-2-0.dll',
    'BINARY'),
+  ('tcl90.dll', 'C:\\Program Files\\Python314\\DLLs\\tcl90.dll', 'BINARY'),
   ('tcl9tk90.dll',
    'C:\\Program Files\\Python314\\DLLs\\tcl9tk90.dll',
    'BINARY'),
-  ('tcl90.dll', 'C:\\Program Files\\Python314\\DLLs\\tcl90.dll', 'BINARY'),
   ('libtommath.dll',
    'C:\\Program Files\\Python314\\DLLs\\libtommath.dll',
    'BINARY'),
@@ -187,38 +222,78 @@
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\ucrtbase.dll',
    'BINARY'),
-  ('api-ms-win-crt-utility-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-utility-l1-1-0.dll',
-   'BINARY'),
   ('zlib1.dll', 'C:\\Program Files\\Python314\\DLLs\\zlib1.dll', 'BINARY'),
   ('api-ms-win-crt-private-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-private-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-datetime-l1-1-0.dll',
+  ('api-ms-win-core-file-l1-2-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-file-l1-2-0.dll',
    'BINARY'),
-  ('api-ms-win-core-handle-l1-1-0.dll',
+  ('api-ms-win-core-memory-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-processthreads-l1-1-1.dll',
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+  ('api-ms-win-core-synch-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-file-l2-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-file-l2-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-interlocked-l1-1-0.dll',
+  ('api-ms-win-core-handle-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
    'BINARY'),
   ('api-ms-win-core-debug-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
@@ -228,69 +303,25 @@
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-libraryloader-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-string-l1-1-0.dll',
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-sysinfo-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-profile-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-profile-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-util-l1-1-0.dll',
+  ('api-ms-win-core-file-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-timezone-l1-1-0.dll',
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-synch-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-sysinfo-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-sysinfo-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-memory-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-heap-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-namedpipe-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-console-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-console-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processthreads-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-localization-l1-2-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-localization-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processenvironment-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-file-l1-2-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-file-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-rtlsupport-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-file-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
    'BINARY'),
   ('customtkinter-6.0.0.dist-info\\INSTALLER',
    'C:\\Users\\tarun verma\\ai agent '
@@ -537,73 +568,73 @@
    'kernal\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
    'ipsum.txt',
    'DATA'),
-  ('httpx2-2.13.0.dist-info\\METADATA',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\METADATA',
-   'DATA'),
-  ('httpcore2-2.13.0.dist-info\\licenses\\LICENSE.md',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\licenses\\LICENSE.md',
-   'DATA'),
   ('pydantic-2.13.5.dist-info\\RECORD',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\RECORD',
-   'DATA'),
-  ('httpcore2-2.13.0.dist-info\\INSTALLER',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\INSTALLER',
-   'DATA'),
-  ('httpx2-2.13.0.dist-info\\RECORD',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\RECORD',
-   'DATA'),
-  ('httpx2-2.13.0.dist-info\\INSTALLER',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\INSTALLER',
-   'DATA'),
-  ('httpx2-2.13.0.dist-info\\licenses\\LICENSE.md',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\licenses\\LICENSE.md',
-   'DATA'),
-  ('httpcore2-2.13.0.dist-info\\RECORD',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\RECORD',
-   'DATA'),
-  ('pydantic-2.13.5.dist-info\\WHEEL',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\WHEEL',
-   'DATA'),
-  ('httpcore2-2.13.0.dist-info\\WHEEL',
-   'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\WHEEL',
    'DATA'),
   ('httpx2-2.13.0.dist-info\\WHEEL',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\WHEEL',
    'DATA'),
+  ('httpx2-2.13.0.dist-info\\licenses\\LICENSE.md',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\licenses\\LICENSE.md',
+   'DATA'),
+  ('httpcore2-2.13.0.dist-info\\INSTALLER',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('httpcore2-2.13.0.dist-info\\RECORD',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\RECORD',
+   'DATA'),
+  ('pydantic-2.13.5.dist-info\\INSTALLER',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\INSTALLER',
+   'DATA'),
   ('pydantic-2.13.5.dist-info\\METADATA',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\METADATA',
    'DATA'),
-  ('httpcore2-2.13.0.dist-info\\METADATA',
+  ('pydantic-2.13.5.dist-info\\WHEEL',
    'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\METADATA',
+   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\WHEEL',
+   'DATA'),
+  ('httpx2-2.13.0.dist-info\\METADATA',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\METADATA',
    'DATA'),
   ('pydantic-2.13.5.dist-info\\licenses\\LICENSE',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\licenses\\LICENSE',
    'DATA'),
-  ('httpx2-2.13.0.dist-info\\entry_points.txt',
+  ('httpcore2-2.13.0.dist-info\\WHEEL',
    'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\entry_points.txt',
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\WHEEL',
+   'DATA'),
+  ('httpx2-2.13.0.dist-info\\INSTALLER',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('httpx2-2.13.0.dist-info\\RECORD',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\RECORD',
+   'DATA'),
+  ('httpcore2-2.13.0.dist-info\\METADATA',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\METADATA',
+   'DATA'),
+  ('httpcore2-2.13.0.dist-info\\licenses\\LICENSE.md',
+   'C:\\Users\\tarun verma\\ai agent '
+   'kernal\\.venv\\Lib\\site-packages\\httpcore2-2.13.0.dist-info\\licenses\\LICENSE.md',
    'DATA'),
   ('pydantic-2.13.5.dist-info\\REQUESTED',
    'C:\\Users\\tarun verma\\ai agent '
    'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\REQUESTED',
    'DATA'),
-  ('pydantic-2.13.5.dist-info\\INSTALLER',
+  ('httpx2-2.13.0.dist-info\\entry_points.txt',
    'C:\\Users\\tarun verma\\ai agent '
-   'kernal\\.venv\\Lib\\site-packages\\pydantic-2.13.5.dist-info\\INSTALLER',
+   'kernal\\.venv\\Lib\\site-packages\\httpx2-2.13.0.dist-info\\entry_points.txt',
    'DATA'),
   ('base_library.zip',
    'C:\\Users\\tarun verma\\ai agent '
