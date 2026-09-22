@@ -5,24 +5,14 @@ ADK wraps each function into a FunctionTool automatically and shows the model th
 function name, the argument names/types and the docstring - so the docstrings
 below are really the tool descriptions the model reads. Keep them clear.
 
-The actual HTTP work is done by firecrawl_client.py, which already lives in the
-project root (the same file the legacy v1 code uses), so Firecrawl logic is only
-written once. It uses the standard library only and needs FIRECRAWL_API_KEY,
-which is read from .env when the tool is called.
+The actual HTTP work is done by the `firecrawl_client` module in this same package.
+It uses the standard library only and needs `FIRECRAWL_API_KEY`, which is read from .env
+when the tool is called.
 """
 
 from __future__ import annotations
 
-import sys
-from pathlib import Path
-
-# Make the project root importable so we can reuse firecrawl_client.py.
-# We append (not insert) so the standard library and site-packages keep priority.
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(_PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(_PROJECT_ROOT))
-
-from firecrawl_client import FirecrawlClient, FirecrawlError, WebPage  # noqa: E402
+from .firecrawl_client import FirecrawlClient, FirecrawlError, WebPage
 
 # Keep each tool result small: the text goes straight into the model's context.
 MAX_PAGE_CHARS = 4000

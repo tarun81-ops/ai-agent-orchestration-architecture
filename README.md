@@ -1,60 +1,55 @@
 # Multi-Agent Kernal (Google ADK)
 
-This project started as a hand-written multi-agent pipeline (v1) and is now rebuilt on
-[Google's Agent Development Kit (ADK)](https://google.github.io/adk-docs/) for Python.
+A central **planner** turns your task into a plain-text plan and a checklist, three
+specialist agents then run in order (**researcher → writer → tester**), and a
+**review-and-revise loop** checks the result against the checklist and fixes it for up
+to 3 rounds. The loop stops the moment the reviewer is satisfied.
 
-A central **planner** breaks your task into a plan plus a checklist, three specialist
-agents then run in order (**researcher -> writer -> tester**), and finally a
-**review-and-revise loop** checks the result against the checklist and fixes it, for up to
-3 rounds. As soon as the work passes, the reviewer stops the loop early.
-
-Everything from v1 is still here, untouched, in **`legacy_v1\`** (CLI, GUI, tests, docs).
+Built on [Google's Agent Development Kit (ADK)](https://google.github.io/adk-docs/)
+for Python. The researcher can read live web pages via Firecrawl.
 
 ---
 
-## 1. Folders and files
+## Files
 
 | Path | What it is |
 | --- | --- |
-| `kernel_agent\` | **The new ADK agent package.** `agent.py` defines `root_agent` |
-| `kernel_agent\agent.py` | Builds the agent tree (planner, specialists, loop); picks the model |
-| `kernel_agent\prompts.py` | Your v1 prompts, reused (only the output contracts changed) |
-| `kernel_agent\tools.py` | Firecrawl web tools (`search_web`, `scrape_page`) for the researcher |
-| `kernel_agent\mock_agents.py` | Fake agents used when `KERNEL_MOCK=1` (offline demo) |
-| `.env` | Your real keys. **Git-ignored - edit this file.** |
-| `.env.example` | The template to copy from |
-| `run_kernel.bat` | Starts the web UI and opens it in your browser |
-| `pytest.ini` | Tells pytest to run only the v1 tests in `tests\` |
-| `legacy_v1\` | Your v1 project exactly as it was (CLI, GUI, tests, README, ARCHITECTURE) |
-| `requirements.txt` | ADK pinned to 2.9.2, plus the legacy packages |
+| `kernel_agent/` | The ADK agent package. `agent.py` builds the agent tree. |
+| `kernel_agent/agent.py` | Builds the agent tree; picks the model; handles mock mode. |
+| `kernel_agent/prompts.py` | Agent personas, rules and wording. |
+| `kernel_agent/tools.py` | Firecrawl web tools (`search_web`, `scrape_page`) for the researcher. |
+| `kernel_agent/mock_agents.py` | Fake agents used when `KERNEL_MOCK=1` (offline demo, no API key). |
+| `kernel_agent/firecrawl_client.py` | Firecrawl v2 HTTP client (stdlib only), used by `tools.py`. |
+| `.env` | Your API keys. **Git-ignored — edit this file.** |
+| `run_kernel.bat` | Starts the ADK web UI on http://localhost:8000 and opens it in your browser. |
+| `requirements.txt` | ADK pinned to 2.9.2 + python-dotenv. |
+| `app.ico` | Icon used if you build a desktop shortcut. |
 
 ---
 
-## 2. Set your API key (once)
+## Set your API key (once)
 
 1. Get a **free** Google AI Studio key: <https://aistudio.google.com/apikey>
-2. Open the `.env` file in this folder with Notepad and replace the placeholder line:
+2. Open `.env` in this folder with Notepad and add a line like:
 
    ```
-   GOOGLE_API_KEY=your_key_here        <- paste your key after the "="
-   KERNEL_MODEL=gemini-3.6-flash       <- optional: any current AI Studio model
+   GOOGLE_API_KEY=AIza...
    ```
 
-3. Save the file. No quotes, no spaces around the `=`.
+   No quotes, no spaces around the `=`. Save the file.
 
-`kernel_agent\.env` is a copy of the same file, and **ADK's CLI loads that copy when it
-starts the agent** (a later `.env` load wins, so the copy matters). `run_kernel.bat` copies
-`.env` across on every start, so if you edit the key just re-run the launcher - or copy it
-yourself: `copy .env kernel_agent\.env`. If the copy still has the placeholder, the agent
-prints a warning telling you exactly this.
-If the key is missing or wrong, ADK reports `API_KEY_INVALID` - that is the signal to
-redo step 2. (No key at all? You can still run everything in mock mode below.)
+`kernel_agent/.env` is a copy of the same file. `run_kernel.bat` copies `.env` across on
+every start, so if you edit the key just re-run the launcher — or copy it yourself:
+`copy .env kernel_agent\.env`.
+
+If the key is missing or wrong, ADK reports `API_KEY_INVALID` — that is the signal to redo
+step 2. No key at all? Run in mock mode instead (below).
 
 ---
 
-## 3. Run it
+## Run it
 
-### A. Normal mode (real Gemini models)
+### Normal mode (real Gemini models)
 
 ```powershell
 # one-shot: run a single task and exit
@@ -63,18 +58,18 @@ redo step 2. (No key at all? You can still run everything in mock mode below.)
 # interactive chat in the terminal
 .venv\Scripts\adk.exe run kernel_agent
 
-# browser UI - the easiest way to watch the agents work
+# browser UI — the easiest way to watch the agents work
 run_kernel.bat
 ```
 
-`run_kernel.bat` starts the ADK web UI and opens <http://localhost:8000> for you. On the
-page: pick **kernel_agent** in the top-left dropdown, type a task, press Enter, and watch
-each agent's output appear in order. Press `Ctrl+C` in the black window to stop the server.
+`run_kernel.bat` starts the ADK web UI on <http://localhost:8000>. On the page: pick
+**kernel_agent** in the top-left dropdown, type a task, press Enter, and watch each agent's
+output appear in order. Press `Ctrl+C` in the black window to stop the server.
 
-### B. Mock mode (no API key, no network, no cost)
+### Mock mode (no API key, no network, no cost)
 
-Mock mode swaps in fake agents that return scripted text, so the full flow still runs -
-including the round-1 failure and the round-2 pass, exactly like v1's `MockLLM`.
+Mock mode swaps in fake agents that return scripted text, so the full flow still runs —
+including the round-1 failure and the round-2 pass.
 
 ```powershell
 # in cmd / PowerShell, for that window only:
@@ -88,7 +83,7 @@ run_kernel.bat
 
 ---
 
-## 4. How the agent flow works
+## How the agent flow works
 
 ```
                      ┌──────────────── your task ────────────────┐
@@ -97,10 +92,10 @@ run_kernel.bat
  (plan +         (facts,        (draft)     (verified      (up to 3 rounds)
   checklist)      Firecrawl)                 result)        │
                                                              ├─ reviewer: all checklist
-                                                             │    items ok? -> exit_loop
-                                                             │    not ok?   -> write feedback
+                                                             │    items ok? → exit_loop
+                                                             │    not ok?   → write feedback
                                                              └─ refiner: apply the feedback
-                                                                          to the result
+                                                                      to the result
 ```
 
 ADK runs exactly that order: one `SequentialAgent` (named `kernel_agent`) contains the
@@ -119,44 +114,44 @@ instruction asks for the pieces it needs with `{state_key}` templating:
 | `reviewer` | `{review}` (feedback) | `{plan}`, `{result}` |
 | `refiner` | `{result}` (revised) | `{plan}`, `{result}`, `{review}` |
 
-The reviewer sits *before* the refiner inside the loop so the round-1 review looks at the
-tester's result, and the refiner only ever runs once there is feedback to apply.
-
-This is what replaces v1's `executor.py` and `state.py`: the old code copied the outputs
-named in a step's `depends_on` and saved `runs\<id>\state.json`; ADK keeps that state in
-the session and shows every event in the web UI instead.
+The reviewer sits *before* the refiner inside the loop, so round 1 reviews the tester's
+result and the refiner only ever runs once there is feedback to apply.
 
 ---
 
-## 5. Notes for a v1 user
+## Optional Firecrawl web research
 
-* **What changed:** the plan is plain text now (v1 used JSON), and the reviewer either
-  calls the built-in `exit_loop` tool (pass) or writes feedback (fail) instead of returning
-  a JSON verdict - that is how an ADK `LoopAgent` stops.
-* **What stayed:** your agent personas, rules and wording, the researcher's Firecrawl web
-  access, the 3-round limit, and the "plan first, verify against a checklist" approach.
-* **What is gone:** the per-step `depends_on` graph (the specialists now run in a fixed
-  order) and the "re-run only the faulty steps" behaviour (the loop now revises the final
-  result). The CustomTkinter GUI is retired - `adk web` replaces it.
-* **Deprecation warning:** `SequentialAgent` and `LoopAgent` are marked *deprecated* in
-  ADK 2.x (Google is moving to a `Workflow` graph API). They still work and are the
-  simplest way to express this pipeline; `requirements.txt` pins `google-adk==2.9.2` so a
-  future release cannot break the project overnight. `agent.py` silences just those two
-  warnings, with a comment explaining why.
-* **v1 is still runnable:** the old code and its 69 pytest tests stay in place
-  (`legacy_v1\` holds the frozen copy). Run them from the project root:
+The researcher can read live web pages. The key is `FIRECRAWL_API_KEY=fc-...` in `.env`.
 
-  ```powershell
-  .venv\Scripts\python.exe -m pytest -q
-  ```
+- `search_web(query)` — search the live web, return the top pages with their text.
+- `scrape_page(url)` — fetch one URL as markdown.
+
+If the key is missing or Firecrawl fails, the researcher keeps working with the plain
+prompt — nothing else in the pipeline is affected.
 
 ---
 
-## 6. Desktop shortcut (optional)
+## Notes
 
-**Easiest way:** right-click `run_kernel.bat` -> *Show more options* -> *Send to* ->
-*Desktop (create shortcut)*. Then right-click the new shortcut -> *Properties* and set
-*Start in* to the project folder, and *Change Icon* to `app.ico`.
+- **Model**: every agent uses `gemini-3.6-flash` by default. Override in `.env` with
+  `KERNEL_MODEL=<any AI Studio model>`.
+- **Retries**: free API keys regularly hit 429/503. ADK retries each agent with growing
+  waits (4 attempts, 2s → 30s).
+- **Deprecation**: `SequentialAgent` and `LoopAgent` are marked deprecated in ADK 2.x
+  (Google is moving to a `Workflow` graph API). They still work and are the simplest way to
+  express this pipeline; `requirements.txt` pins `google-adk==2.9.2` so a future release
+  cannot break the project overnight. `agent.py` silences just those two warnings.
+- **Mock agents are not the same code path as the real ones**. The fake reviewer stops the
+  loop by escalating (the same effect as the real reviewer's `exit_loop` tool). If ADK's
+  internal event model changes, the mock reviewer may need a small update.
+
+---
+
+## Desktop shortcut (optional)
+
+**Easiest way:** right-click `run_kernel.bat` → *Show more options* → *Send to* → *Desktop
+(create shortcut)*. Then right-click the new shortcut → *Properties*, set *Start in* to this
+folder, and *Change Icon* to `app.ico`.
 
 **Or paste this into PowerShell** to create it in one go:
 
