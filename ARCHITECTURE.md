@@ -11,6 +11,7 @@ Flow:
 
 Rules:
 - Agents never call each other; everything goes through the orchestrator.
+- The researcher may read live web pages: research.py wraps the injected llm callable, so researcher prompts get Firecrawl scrape/search results appended before the model is called. Only the researcher role is touched, fetched pages are cached per run, and a missing key or API failure degrades to a plain prompt (see README section 8).
 - All model calls go through an injectable function llm(role, system, user, json_mode=False) that defaults to call_llm, so everything can be tested with a fake.
 - No API keys in code; keys come from environment variables (.env for local use, never committed).
 - Plain Python control loop, no agent framework. Pydantic v2 for all JSON schemas. Use pathlib, utf-8, and nothing bash-only (Windows/PowerShell).

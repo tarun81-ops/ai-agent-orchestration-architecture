@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.\\.venv\\scripts\\python.exe *)",
+      "Bash(.\\.venv\\scripts\\adk.exe *)"
+    ]
+  },
+  "$version": 4
+}

@@ -11,10 +11,9 @@ so the window never freezes.
 Run it:
     .venv\\Scripts\\python.exe gui.py        (or double-click run_gui.bat)
 
-Build a single windowed .exe (no console) with PyInstaller:
-    .venv\\Scripts\\python.exe -m PyInstaller --noconfirm --clean --onefile --windowed ^
-        --name "AI-Agent-Kernal" --collect-all customtkinter gui.py
-  (add --icon "app.ico" if you have an icon file)
+Build a single windowed .exe (no console) with PyInstaller. Use ONE LINE
+(PowerShell does not accept the cmd.exe "^" line continuation):
+    .venv\\Scripts\\python.exe -m PyInstaller --noconfirm --clean --onefile --windowed --name "AI-Agent-Kernal" --collect-all customtkinter --icon "app.ico" gui.py
 
 Notes for the frozen exe:
   * Drop the .env file next to the .exe (or set GROQ_API_KEY / GEMINI_API_KEY
@@ -42,6 +41,7 @@ from config import MAX_ROUNDS, RUNS_DIR
 from main import sanitize_message
 from mock_llm import MockLLM
 from pipeline import run_task
+from research import build_research_llm
 from schemas import RunState
 import state as state_module
 
@@ -63,6 +63,7 @@ LOG_COLORS = {
     "plan": "#c4b5fd",  # plan / checklist
     "review": "#fde68a",  # reviewer is checking
     "revise": "#fdba74",  # review-and-revise loop
+    "web": "#93c5fd",  # Firecrawl web research for the researcher
     "pass": "#6ee7b7",  # verdict passed
     "fail": "#fca5a5",  # verdict failed
     "warn": "#fbbf24",
@@ -430,7 +431,7 @@ class KernalGUI(ctk.CTk):
 
         controls = ctk.CTkFrame(task_frame, fg_color="transparent")
         controls.grid(row=2, column=0, sticky="ew", padx=12, pady=(0, 10))
-        controls.grid_columnconfigure(3, weight=1)
+        controls.grid_columnconfigure(4, weight=1)
 
         self.mock_var = ctk.BooleanVar(value=True)
         self.mock_check = ctk.CTkCheckBox(
@@ -445,10 +446,28 @@ class KernalGUI(ctk.CTk):
         self.mock_check.grid(row=0, column=0, sticky="w", padx=(0, 8))
         ctk.CTkLabel(
             controls,
-            text="(no API keys, no network)",
+            text="(offline, scripted MockLLM)",
             font=ctk.CTkFont(family="Segoe UI", size=11),
             text_color="#9ca3af",
         ).grid(row=0, column=1, sticky="w", padx=(0, 18))
+
+        self.web_var = ctk.BooleanVar(value=True)
+        self.web_check = ctk.CTkCheckBox(
+            controls,
+            text="Web research",
+            variable=self.web_var,
+            font=self._body_font,
+            checkbox_width=20,
+            checkbox_height=20,
+            command=self._on_web_toggle,
+        )
+        self.web_check.grid(row=0, column=2, sticky="w", padx=(0, 8))
+        ctk.CTkLabel(
+            controls,
+            text="(Firecrawl, researcher steps)",
+            font=ctk.CTkFont(family="Segoe UI", size=11),
+            text_color="#9ca3af",
+        ).grid(row=0, column=3, sticky="w", padx=(0, 18))
 
         self.run_button = ctk.CTkButton(
             controls,
@@ -458,7 +477,7 @@ class KernalGUI(ctk.CTk):
             font=ctk.CTkFont(family="Segoe UI", size=14, weight="bold"),
             command=self.on_run,
         )
-        self.run_button.grid(row=0, column=2, sticky="w")
+        self.run_button.grid(row=0, column=4, sticky="w")
 
         self.status_label = ctk.CTkLabel(
             controls,
@@ -467,7 +486,7 @@ class KernalGUI(ctk.CTk):
             text_color="#9ca3af",
             anchor="e",
         )
-        self.status_label.grid(row=0, column=3, sticky="e", padx=(12, 0))
+        self.status_label.grid(row=0, column=5, sticky="e", padx=(12, 0))
 
         panels = ctk.CTkFrame(self, fg_color="transparent")
         panels.grid(row=3, column=0, sticky="nsew", padx=16, pady=(0, 4))
@@ -525,6 +544,7 @@ class KernalGUI(ctk.CTk):
         self.footer_label.grid(row=4, column=0, sticky="ew", padx=18, pady=(0, 10))
 
         self._configure_log_tags()
+        self._sync_web_toggle()
 
     def _configure_log_tags(self) -> None:
         """Color-code log lines. CTkTextbox forwards tag_* calls to its tkinter.Text."""
@@ -574,9 +594,22 @@ class KernalGUI(ctk.CTk):
         self.after(EVENT_POLL_MS, self._drain_events)
 
     def _on_mock_toggle(self) -> None:
+        self._sync_web_toggle()
+        if self._running:
+            return
+        if self.mock_var.get():
+            self.status_label.configure(text="Mock mode ON - runs offline with the scripted MockLLM")
+        else:
+            self.status_label.configure(text="Live mode - real models will be called")
+
+    def _on_web_toggle(self) -> None:
         if not self._running:
-            mode = "Mock mode ON - runs offline with the scripted MockLLM" if self.mock_var.get() else "Live mode - real models will be called"
-            self.status_label.configure(text=mode)
+            state = "ON" if self.web_var.get() else "OFF"
+            self.status_label.configure(text=f"Web research (Firecrawl) {state}")
+
+    def _sync_web_toggle(self) -> None:
+        """Web research only affects live runs, so grey the box out in Mock mode."""
+        self.web_check.configure(state="disabled" if self.mock_var.get() else "normal")
 
     # ------------------------------------------------------------ running --
 
@@ -592,11 +625,13 @@ class KernalGUI(ctk.CTk):
             return
 
         mock_mode = bool(self.mock_var.get())
+        web_enabled = bool(self.web_var.get()) and not mock_mode
         mode_text = (
             "mock mode - scripted MockLLM, no API keys or network needed"
             if mock_mode
             else "live mode - calling the models configured in llm.py"
         )
+        web_text = "web research ON (Firecrawl)" if web_enabled else "web research OFF"
 
         self._running = True
         self._run_id = state_module.new_run_id()
@@ -608,21 +643,29 @@ class KernalGUI(ctk.CTk):
         )
 
         self._append_log("-" * 96, "detail")
-        self._append_log(f"RUN {self._run_id} started ({mode_text})", "plan")
+        self._append_log(f"RUN {self._run_id} started ({mode_text}; {web_text})", "plan")
         self._append_log(f"TASK: {_preview(task, 300)}", "detail")
 
         self._worker = threading.Thread(
             target=self._run_worker,
-            args=(task, mock_mode, self._run_id),
+            args=(task, mock_mode, self._run_id, web_enabled),
             name=f"kernal-run-{self._run_id}",
             daemon=True,
         )
         self._worker.start()
 
-    def _run_worker(self, task: str, mock_mode: bool, run_id: str) -> None:
+    def _run_worker(self, task: str, mock_mode: bool, run_id: str, web_enabled: bool = False) -> None:
         """Background thread: run the untouched pipeline, report via the event queue."""
         try:
-            base_llm = MockLLM() if mock_mode else call_llm
+            base_llm: Any = MockLLM() if mock_mode else call_llm
+            if web_enabled:
+                # Researcher steps get live Firecrawl pages appended to their prompt;
+                # ObservingLLM stays outside so the narration still shows the
+                # orchestrator's own hand-off prompt.
+                base_llm = build_research_llm(
+                    base_llm,
+                    notify=lambda message: self._emit_event(message, "web"),
+                )
             observed_llm = ObservingLLM(base_llm, self._emit_event)
             # A fresh run id is created here (state.new_run_id) and handed to the
             # pipeline, which treats an unknown id as a brand new run. That way the

@@ -22,10 +22,13 @@ class AgentInfo(dict):
 
 AGENTS: Dict[str, AgentInfo] = {
     "researcher": AgentInfo(
-        description="Gathers and organizes facts.",
+        description="Gathers and organizes facts and can read live web pages.",
         system=(
             "You are a researcher agent. Your role is to gather and organize relevant facts, "
-            "data, and background information for the given task. Be thorough, accurate, and structured."
+            "data, and background information for the given task. Be thorough, accurate, and structured. "
+            "When the prompt contains live web research with source URLs, treat it as your primary "
+            "evidence: base your findings on it, cite the source URLs you used, and say plainly when "
+            "those pages do not answer the question instead of inventing details."
         ),
     ),
     "writer": AgentInfo(
@@ -48,7 +51,7 @@ PLANNER_SYSTEM = """You are the central orchestrator of a multi-agent system.
 Your job is to break the user's task into 2-5 ordered steps and create a concrete verification checklist.
 
 Available agent roles from AGENTS:
-- researcher: Gathers and organizes facts.
+- researcher: Gathers and organizes facts and can read live web pages.
 - writer: Drafts the deliverable (text or code).
 - tester: Checks and improves a draft (finds errors and missing parts, runs sanity checks).
 
@@ -58,7 +61,8 @@ Rules:
 3. Set `depends_on` so each step lists only the earlier steps it truly needs (earlier step IDs only; never future steps or self).
 4. The last step must produce the final deliverable.
 5. Write a checklist of 3-6 concrete, checkable criteria for evaluating the final result written BEFORE any work starts.
-6. Reply with JSON only. Do not include markdown formatting, backticks, or conversational text.
+6. If the user's task names specific web pages or URLs, copy them verbatim into the researcher's instruction; never invent URLs yourself.
+7. Reply with JSON only. Do not include markdown formatting, backticks, or conversational text.
 
 Exact JSON schema:
 {

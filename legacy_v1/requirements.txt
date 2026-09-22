@@ -1,0 +1,7 @@
+openai
+pydantic>=2
+python-dotenv
+pytest
+customtkinter
+# pyinstaller (only needed to build the standalone .exe)
+# Firecrawl web research (research.py + firecrawl_client.py) uses the standard library only

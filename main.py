@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from config import MAX_ROUNDS, RUNS_DIR
 from mock_llm import MockLLM
 from pipeline import run_task
+from research import build_research_llm
 
 try:
     from llm import call_llm
@@ -21,7 +22,29 @@ CONSOLE_MAX_CHARS = 600
 
 def sanitize_message(text: str) -> str:
     """Mask any potential API keys from error messages."""
-    return re.sub(r"(gsk_[a-zA-Z0-9_-]+|AIza[a-zA-Z0-9_-]+)", "[REDACTED_KEY]", text)
+    return re.sub(
+        r"(gsk_[a-zA-Z0-9_-]+|AIza[a-zA-Z0-9_-]+|fc-[a-zA-Z0-9_-]+|AQ\.[a-zA-Z0-9_-]+)",
+        "[REDACTED_KEY]",
+        text,
+    )
+
+
+def use_safe_console_encoding() -> None:
+    """Stop Windows consoles (cp1252) from crashing on model text.
+
+    Model output and scraped web pages routinely contain characters such as the
+    non-breaking hyphen (U+2011), en dashes and curly quotes that cp1252 cannot
+    encode. Reconfiguring the streams with errors="replace" prints "?" instead of
+    raising UnicodeEncodeError part-way through a run.
+    """
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is None:
+            continue
+        try:
+            reconfigure(errors="replace")
+        except (ValueError, OSError):
+            continue
 
 
 def handle_backend_error(exc: Exception) -> None:
@@ -65,6 +88,7 @@ def handle_backend_error(exc: Exception) -> None:
 
 
 def main() -> None:
+    use_safe_console_encoding()
     load_dotenv()
 
     parser = argparse.ArgumentParser(
@@ -86,6 +110,11 @@ def main() -> None:
         "--mock",
         action="store_true",
         help="Use scripted Mock LLM (runs with no API keys, model, or network).",
+    )
+    parser.add_argument(
+        "--no-web",
+        action="store_true",
+        help="Skip Firecrawl web research for the researcher agent (live runs only).",
     )
     parser.add_argument(
         "--resume",
@@ -116,6 +145,14 @@ def main() -> None:
         sys.exit(1)
 
     llm = MockLLM() if args.mock else call_llm
+    if args.mock:
+        pass  # MockLLM ignores prompts, so no web research is wired in mock runs
+    elif args.no_web:
+        print("Web research: disabled (--no-web)")
+    else:
+        # Researcher steps get live Firecrawl pages appended to their prompt.
+        llm = build_research_llm(llm, notify=print)
+        print("Web research: Firecrawl enabled for the researcher agent (use --no-web to skip)")
 
     try:
         state = run_task(

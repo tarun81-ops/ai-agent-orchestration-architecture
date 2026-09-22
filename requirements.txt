@@ -1,6 +1,17 @@
+# ============================================================================
+# Google ADK (new agent framework) - see kernel_agent/ and README.md
+# Pinned so a future ADK release cannot remove the template agents we use.
+# ============================================================================
+google-adk==2.9.2
+python-dotenv
+
+# ============================================================================
+# Legacy v1 stack (kept so the old CLI/GUI in this folder and in legacy_v1/
+# still run: test with  .venv\Scripts\python -m pytest -q)
+# ============================================================================
 openai
 pydantic>=2
-python-dotenv
 pytest
 customtkinter
 # pyinstaller (only needed to build the standalone .exe)
+# Firecrawl web research (research.py / kernel_agent/tools.py) uses the standard library only

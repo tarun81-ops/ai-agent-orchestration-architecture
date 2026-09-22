@@ -1,4 +1,8 @@
 .env
+kernel_agent/.env
 .venv/
 runs/
 __pycache__/
+.pytest_cache/
+.adk/
+dist/

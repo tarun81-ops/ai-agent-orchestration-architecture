@@ -1,171 +1,171 @@
-# Multi-Agent System (Kernal)
+# Multi-Agent Kernal (Google ADK)
 
-An autonomous multi-agent orchestration system running on Windows (PowerShell) with Python 3.10+. A central orchestrator creates an ordered, dependent plan with verification criteria. Specialized agents execute steps in sequence, passing only relevant context forward. A reviewer evaluates the final result against the checklist; on failure, faulty steps and their dependencies are re-executed for up to 3 rounds.
+This project started as a hand-written multi-agent pipeline (v1) and is now rebuilt on
+[Google's Agent Development Kit (ADK)](https://google.github.io/adk-docs/) for Python.
+
+A central **planner** breaks your task into a plan plus a checklist, three specialist
+agents then run in order (**researcher -> writer -> tester**), and finally a
+**review-and-revise loop** checks the result against the checklist and fixes it, for up to
+3 rounds. As soon as the work passes, the reviewer stops the loop early.
+
+Everything from v1 is still here, untouched, in **`legacy_v1\`** (CLI, GUI, tests, docs).
 
 ---
 
-## 1. Prerequisites & Setup (Windows PowerShell)
+## 1. Folders and files
 
-Open PowerShell and navigate to the project directory:
+| Path | What it is |
+| --- | --- |
+| `kernel_agent\` | **The new ADK agent package.** `agent.py` defines `root_agent` |
+| `kernel_agent\agent.py` | Builds the agent tree (planner, specialists, loop); picks the model |
+| `kernel_agent\prompts.py` | Your v1 prompts, reused (only the output contracts changed) |
+| `kernel_agent\tools.py` | Firecrawl web tools (`search_web`, `scrape_page`) for the researcher |
+| `kernel_agent\mock_agents.py` | Fake agents used when `KERNEL_MOCK=1` (offline demo) |
+| `.env` | Your real keys. **Git-ignored - edit this file.** |
+| `.env.example` | The template to copy from |
+| `run_kernel.bat` | Starts the web UI and opens it in your browser |
+| `pytest.ini` | Tells pytest to run only the v1 tests in `tests\` |
+| `legacy_v1\` | Your v1 project exactly as it was (CLI, GUI, tests, README, ARCHITECTURE) |
+| `requirements.txt` | ADK pinned to 2.9.2, plus the legacy packages |
 
-```powershell
-cd "C:\Users\tarun verma\ai agent kernal"
-```
+---
 
-### Step 1: Create and activate virtual environment
+## 2. Set your API key (once)
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
+1. Get a **free** Google AI Studio key: <https://aistudio.google.com/apikey>
+2. Open the `.env` file in this folder with Notepad and replace the placeholder line:
 
-### Step 2: Install dependencies
-
-```powershell
-.venv\Scripts\python -m pip install -r requirements.txt
-```
-
-### Step 3: Install & configure Ollama
-
-1. Download and install Ollama for Windows from [ollama.com](https://ollama.com).
-2. Pull the default local model in PowerShell:
-   ```powershell
-   ollama pull qwen3:8b
    ```
-3. Set the context length to 8192 using `setx` so local models have adequate memory:
-   ```powershell
-   setx OLLAMA_CONTEXT_LENGTH 8192
+   GOOGLE_API_KEY=your_key_here        <- paste your key after the "="
+   KERNEL_MODEL=gemini-3.6-flash       <- optional: any current AI Studio model
    ```
-4. Restart the Ollama service or application from the Windows system tray so the new environment variable takes effect.
 
-### Step 4: Configure Groq API Key
+3. Save the file. No quotes, no spaces around the `=`.
 
-For cloud models (orchestrator and reviewer), set your `GROQ_API_KEY`:
+`kernel_agent\.env` is a copy of the same file, and **ADK's CLI loads that copy when it
+starts the agent** (a later `.env` load wins, so the copy matters). `run_kernel.bat` copies
+`.env` across on every start, so if you edit the key just re-run the launcher - or copy it
+yourself: `copy .env kernel_agent\.env`. If the copy still has the placeholder, the agent
+prints a warning telling you exactly this.
+If the key is missing or wrong, ADK reports `API_KEY_INVALID` - that is the signal to
+redo step 2. (No key at all? You can still run everything in mock mode below.)
 
-- **For the current PowerShell session only:**
+---
+
+## 3. Run it
+
+### A. Normal mode (real Gemini models)
+
+```powershell
+# one-shot: run a single task and exit
+.venv\Scripts\adk.exe run kernel_agent "Explain in two sentences how a capacitor stores charge"
+
+# interactive chat in the terminal
+.venv\Scripts\adk.exe run kernel_agent
+
+# browser UI - the easiest way to watch the agents work
+run_kernel.bat
+```
+
+`run_kernel.bat` starts the ADK web UI and opens <http://localhost:8000> for you. On the
+page: pick **kernel_agent** in the top-left dropdown, type a task, press Enter, and watch
+each agent's output appear in order. Press `Ctrl+C` in the black window to stop the server.
+
+### B. Mock mode (no API key, no network, no cost)
+
+Mock mode swaps in fake agents that return scripted text, so the full flow still runs -
+including the round-1 failure and the round-2 pass, exactly like v1's `MockLLM`.
+
+```powershell
+# in cmd / PowerShell, for that window only:
+set KERNEL_MOCK=1
+.venv\Scripts\adk.exe run kernel_agent "any task - the answer is canned"
+
+# or start the web UI in mock mode:
+set KERNEL_MOCK=1
+run_kernel.bat
+```
+
+---
+
+## 4. How the agent flow works
+
+```
+                     ┌──────────────── your task ────────────────┐
+                     ▼                                           │
+  planner  ──►  researcher  ──►  writer  ──►  tester  ──►  refine_loop
+ (plan +         (facts,        (draft)     (verified      (up to 3 rounds)
+  checklist)      Firecrawl)                 result)        │
+                                                             ├─ reviewer: all checklist
+                                                             │    items ok? -> exit_loop
+                                                             │    not ok?   -> write feedback
+                                                             └─ refiner: apply the feedback
+                                                                          to the result
+```
+
+ADK runs exactly that order: one `SequentialAgent` (named `kernel_agent`) contains the
+planner, the three specialists and the loop. The loop is a `LoopAgent` with
+`max_iterations=3`, so at worst it revisits the result three times.
+
+**Agents never talk to each other directly.** They share one session state, and each
+instruction asks for the pieces it needs with `{state_key}` templating:
+
+| Agent | Writes | Reads |
+| --- | --- | --- |
+| `planner` | `{plan}` (plan + checklist) | your task (the conversation) |
+| `researcher` | `{research}` | `{plan}` |
+| `writer` | `{draft}` | `{plan}`, `{research}` |
+| `tester` | `{result}` (final deliverable) | `{plan}`, `{research}`, `{draft}` |
+| `reviewer` | `{review}` (feedback) | `{plan}`, `{result}` |
+| `refiner` | `{result}` (revised) | `{plan}`, `{result}`, `{review}` |
+
+The reviewer sits *before* the refiner inside the loop so the round-1 review looks at the
+tester's result, and the refiner only ever runs once there is feedback to apply.
+
+This is what replaces v1's `executor.py` and `state.py`: the old code copied the outputs
+named in a step's `depends_on` and saved `runs\<id>\state.json`; ADK keeps that state in
+the session and shows every event in the web UI instead.
+
+---
+
+## 5. Notes for a v1 user
+
+* **What changed:** the plan is plain text now (v1 used JSON), and the reviewer either
+  calls the built-in `exit_loop` tool (pass) or writes feedback (fail) instead of returning
+  a JSON verdict - that is how an ADK `LoopAgent` stops.
+* **What stayed:** your agent personas, rules and wording, the researcher's Firecrawl web
+  access, the 3-round limit, and the "plan first, verify against a checklist" approach.
+* **What is gone:** the per-step `depends_on` graph (the specialists now run in a fixed
+  order) and the "re-run only the faulty steps" behaviour (the loop now revises the final
+  result). The CustomTkinter GUI is retired - `adk web` replaces it.
+* **Deprecation warning:** `SequentialAgent` and `LoopAgent` are marked *deprecated* in
+  ADK 2.x (Google is moving to a `Workflow` graph API). They still work and are the
+  simplest way to express this pipeline; `requirements.txt` pins `google-adk==2.9.2` so a
+  future release cannot break the project overnight. `agent.py` silences just those two
+  warnings, with a comment explaining why.
+* **v1 is still runnable:** the old code and its 69 pytest tests stay in place
+  (`legacy_v1\` holds the frozen copy). Run them from the project root:
+
   ```powershell
-  $env:GROQ_API_KEY = "gsk_your_groq_api_key_here"
+  .venv\Scripts\python.exe -m pytest -q
   ```
-- **Persistently across sessions:**
-  ```powershell
-  setx GROQ_API_KEY "gsk_your_groq_api_key_here"
-  ```
-*(You can also place `GROQ_API_KEY=gsk_...` in a `.env` file in the project root).*
 
 ---
 
-## 2. Connection Test
+## 6. Desktop shortcut (optional)
 
-Verify backend connectivity to local Ollama and the cloud model:
+**Easiest way:** right-click `run_kernel.bat` -> *Show more options* -> *Send to* ->
+*Desktop (create shortcut)*. Then right-click the new shortcut -> *Properties* and set
+*Start in* to the project folder, and *Change Icon* to `app.ico`.
 
-```powershell
-.venv\Scripts\python llm.py
-```
-
-Expected output:
-- Concise test response from the `researcher` role via local Ollama.
-- JSON response from the `orchestrator` role via Groq.
-
----
-
-## 3. Running the System
-
-### A. Run in Mock Mode (No API keys or network required)
-
-Test the complete planning, execution, round 1 failure, revision, and round 2 pass loop offline:
+**Or paste this into PowerShell** to create it in one go:
 
 ```powershell
-.venv\Scripts\python main.py --mock "demo task"
+$shell = New-Object -ComObject WScript.Shell
+$lnk = $shell.CreateShortcut("$env:USERPROFILE\Desktop\Multi-Agent Kernal.lnk")
+$lnk.TargetPath       = "C:\Users\tarun verma\ai agent kernal\run_kernel.bat"
+$lnk.WorkingDirectory = "C:\Users\tarun verma\ai agent kernal"
+$lnk.IconLocation     = "C:\Users\tarun verma\ai agent kernal\app.ico"
+$lnk.Description      = "Start the ADK web UI for the Multi-Agent Kernal"
+$lnk.Save()
 ```
-
-### B. Run a Real Task
-
-Run a full autonomous task using real local and cloud models:
-
-```powershell
-.venv\Scripts\python main.py "Research how capacitors work and write a one-page summary for first-year students"
-```
-
-You can also pass task files:
-```powershell
-.venv\Scripts\python main.py --task-file task.txt
-```
-
----
-
-## 4. Understanding the `runs/` Folder
-
-Every run creates a timestamped subdirectory inside `runs/<run_id>/`:
-
-```
-runs/
-└── 20260920_153026_ea7a12/
-    ├── state.json        # Full serialized RunState (plan, step results, verdicts, attempts)
-    ├── log.txt           # Detailed timeline and per-call metrics (role, elapsed time, output size)
-    └── final_output.md   # Final deliverable produced by the pipeline
-```
-
-- **`state.json`**: Saved automatically after every individual step and review round. Ensures complete state persistence and auditability.
-- **`log.txt`**: Logs every stage transition, step execution, per-call durations in seconds, and output byte lengths.
-- **`final_output.md`**: Clean markdown export of the final approved deliverable.
-
----
-
-## 5. Resuming Interrupted Runs (`--resume`)
-
-If a run is interrupted or halted due to network or rate limit issues, resume it using its `run_id`:
-
-```powershell
-.venv\Scripts\python main.py --resume 20260920_153026_ea7a12
-```
-
-When resuming:
-1. Steps that already have saved results are automatically skipped.
-2. Execution picks up from the first incomplete step.
-3. The review loop continues seamlessly.
-
----
-
-## 6. Running Tests
-
-Run the test suite with pytest:
-
-```powershell
-.venv\Scripts\python -m pytest -q
-```
-
----
-
-## 7. Desktop GUI (Windows)
-
-`gui.py` is a CustomTkinter front-end for the same pipeline `main.py` runs. The orchestrator, agents, executor, reviewer and pipeline modules are used unchanged: the GUI runs `pipeline.run_task` on a background thread and wraps the injected `llm` callable so it can narrate every hand-off. It provides a task box, a **Mock mode** checkbox, a **Run** button, a live activity log (orchestrator -> agent -> reviewer -> revision) and a final output panel with a **Copy** button.
-
-### Launch it
-
-Double-click `run_gui.bat`, or:
-
-```powershell
-.venv\Scripts\python.exe gui.py
-```
-
-- **Mock mode** (ticked by default) runs the scripted `MockLLM` offline: no API keys, no network, no Ollama.
-- Untick it for a real run: the GUI uses the same `.env` keys and the same `llm.py` `ROLES` as `main.py`.
-- Every run still writes `runs/<run_id>/state.json`, `log.txt` and `final_output.md`.
-
-### Build a single .exe (no console window)
-
-```powershell
-.venv\Scripts\python.exe -m pip install pyinstaller
-.venv\Scripts\python.exe -m PyInstaller --noconfirm --clean --onefile --windowed `
-    --name "AI-Agent-Kernal" --collect-all customtkinter gui.py
-```
-
-The result is `dist\AI-Agent-Kernal.exe`:
-
-- `--windowed` drops the console window (the GUI is the only window shown).
-- `--onefile` packs everything into one executable.
-- `--collect-all customtkinter` bundles the customtkinter theme assets so the frozen app can find them.
-- Add `--icon "app.ico"` if you want a custom icon.
-
-Copy the `.exe` next to `.env` and start it from that folder: live mode then finds the keys in the working directory, and `runs/` is created where the `.exe` was launched.
-
